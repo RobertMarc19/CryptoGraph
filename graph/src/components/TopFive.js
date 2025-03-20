@@ -20,26 +20,26 @@ const TopFive = ({ selectedTime }) => {
     fetchTopFive();
   }, [selectedTime]);
   return (
-  <div>
-    <h3>Top 5 Growing Crypto</h3>
-    <ul>
-      {topGainers.map((coin) => (
-        <li key={coin.id}>
-          {coin.name} ({coin.price_change_percentage_24h.toFixed(2)}%)
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h3>Top 5 Growing Crypto</h3>
+      <ul>
+        {topGainers.map((coin) => (
+          <li key={coin.id}>
+            {coin.name} ({coin.price_change_percentage_24h.toFixed(2)}%)
+          </li>
+        ))}
+      </ul>
 
-    <h3>Top 5 Shrinking Crypto</h3>
-    <ul>
+      <h3>Top 5 Shrinking Crypto</h3>
+      <ul>
         {topLosers.map((coin) => (
           <li key={coin.id}>
             {coin.name} ({coin.price_change_percentage_24h.toFixed(2)}%)
           </li>
         ))}
-    </ul>
-  </div>
-);
+      </ul>
+    </div>
+  );
 };
 
 export default TopFive;
